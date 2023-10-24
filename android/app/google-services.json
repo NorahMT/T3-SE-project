@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "428013873222",
+    "firebase_url": "https://braintech-94399-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "braintech-94399",
+    "storage_bucket": "braintech-94399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428013873222:android:aa7fb19c792ac524eb0247",
+        "android_client_info": {
+          "package_name": "com.mycompany.braintech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3K_PvWIF-HAAlESNAkc16imDN9O7e2kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
