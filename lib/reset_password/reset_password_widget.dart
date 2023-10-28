@@ -66,7 +66,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
           icon: Icon(
             Icons.arrow_back_rounded,
             color: Color(0xFFE3E8ED),
-            size: 30.0,
+            size: 26.0,
           ),
           onPressed: () async {
             context.pop();

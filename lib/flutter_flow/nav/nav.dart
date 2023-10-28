@@ -113,8 +113,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'resetPassword',
           path: '/resetPassword',
           builder: (context, params) => ResetPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'learningMaterial',
+          path: '/learningMaterial',
+          builder: (context, params) => LearningMaterialWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

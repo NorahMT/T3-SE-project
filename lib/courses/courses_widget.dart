@@ -159,7 +159,7 @@ class _CoursesWidgetState extends State<CoursesWidget> {
                         (records) => _model.simpleSearchResults = TextSearch(
                           records
                               .map(
-                                (record) => TextSearchItem(record,
+                                (record) => TextSearchItem.fromTerms(record,
                                     [record.name!, record.description!]),
                               )
                               .toList(),
@@ -209,79 +209,97 @@ class _CoursesWidgetState extends State<CoursesWidget> {
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         alignment: AlignmentDirectional(0.00, 0.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-1.00, -1.00),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    10.0, 10.0, 0.0, 0.0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '22hg9qo8' /* Introduction To Programming */,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('learningMaterial');
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(-1.00, -1.00),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      10.0, 10.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('learningMaterial');
+                                    },
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        '22hg9qo8' /* Introduction To Programming */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Outfit',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiary,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
+                                          ),
+                                    ),
                                   ),
+                                ),
+                              ),
+                              ToggleIcon(
+                                onPressed: () async {
+                                  setState(() => FFAppState().addFav =
+                                      !FFAppState().addFav);
+                                },
+                                value: FFAppState().addFav,
+                                onIcon: Icon(
+                                  Icons.favorite,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  size: 25.0,
+                                ),
+                                offIcon: Icon(
+                                  Icons.favorite_border,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 25.0,
+                                ),
+                              ),
+                              CircularPercentIndicator(
+                                percent: 0.5,
+                                radius: 50.0,
+                                lineWidth: 8.0,
+                                animation: true,
+                                animateFromLastPercent: true,
+                                progressColor:
+                                    FlutterFlowTheme.of(context).primary,
+                                backgroundColor:
+                                    FlutterFlowTheme.of(context).accent4,
+                                center: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'zvqg4w0t' /* 50% */,
+                                  ),
+                                  textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
+                                      .headlineSmall
                                       .override(
-                                        fontFamily: 'Outfit',
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiary,
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .headlineSmallFamily,
+                                        fontSize: 24.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily),
+                                                    .headlineSmallFamily),
                                       ),
                                 ),
                               ),
-                            ),
-                            ToggleIcon(
-                              onPressed: () async {
-                                setState(() =>
-                                    FFAppState().addFav = !FFAppState().addFav);
-                              },
-                              value: FFAppState().addFav,
-                              onIcon: Icon(
-                                Icons.favorite,
-                                color: FlutterFlowTheme.of(context).primary,
-                                size: 25.0,
-                              ),
-                              offIcon: Icon(
-                                Icons.favorite_border,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 25.0,
-                              ),
-                            ),
-                            CircularPercentIndicator(
-                              percent: 0.5,
-                              radius: 50.0,
-                              lineWidth: 8.0,
-                              animation: true,
-                              animateFromLastPercent: true,
-                              progressColor:
-                                  FlutterFlowTheme.of(context).primary,
-                              backgroundColor:
-                                  FlutterFlowTheme.of(context).accent4,
-                              center: Text(
-                                FFLocalizations.of(context).getText(
-                                  'zvqg4w0t' /* 50% */,
-                                ),
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .headlineSmallFamily,
-                                      fontSize: 24.0,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineSmallFamily),
-                                    ),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),

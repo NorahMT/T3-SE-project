@@ -4,3 +4,5 @@ export '/pages/headpage/headpage_widget.dart' show HeadpageWidget;
 export '/courses/courses_widget.dart' show CoursesWidget;
 export '/creat_account/creat_account_widget.dart' show CreatAccountWidget;
 export '/reset_password/reset_password_widget.dart' show ResetPasswordWidget;
+export '/learning_material/learning_material_widget.dart'
+    show LearningMaterialWidget;

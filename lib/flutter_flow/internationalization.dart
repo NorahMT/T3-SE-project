@@ -290,6 +290,85 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
+  // learningMaterial
+  {
+    'izjve8pq': {
+      'en': 'Videos',
+      'ar': '',
+    },
+    're7iev9l': {
+      'en': 'Search...',
+      'ar': '',
+    },
+    'abkwietn': {
+      'en': '4.25',
+      'ar': '',
+    },
+    '8eu3uvv7': {
+      'en': 'Library',
+      'ar': '',
+    },
+    'vte7k7uw': {
+      'en': 'Work in progress',
+      'ar': '',
+    },
+    'pb1gd9rx': {
+      'en': '..',
+      'ar': '',
+    },
+    'hd4za60d': {
+      'en': '4.25',
+      'ar': '',
+    },
+    'ovxekbdu': {
+      'en': 'Work in progress',
+      'ar': '',
+    },
+    'rloaxi0p': {
+      'en': '..',
+      'ar': '',
+    },
+    'xc7ufbx7': {
+      'en': '4.25',
+      'ar': '',
+    },
+    'np9dlssz': {
+      'en': 'Quizzez',
+      'ar': '',
+    },
+    'vlgx52c1': {
+      'en': 'Work in progress',
+      'ar': '',
+    },
+    '4a6l0dy5': {
+      'en': '..',
+      'ar': '',
+    },
+    'ecxl2hs9': {
+      'en': '4.25',
+      'ar': '',
+    },
+    'kza27gk4': {
+      'en': 'Work in progress',
+      'ar': '',
+    },
+    '0izvb8br': {
+      'en': '..',
+      'ar': '',
+    },
+    'v3rduioc': {
+      'en': '4.25',
+      'ar': '',
+    },
+    '6wuplzal': {
+      'en': 'Introduction to Programming',
+      'ar': '',
+    },
+    'me8zz08g': {
+      'en': 'Home',
+      'ar': '',
+    },
+  },
   // menu
   {
     'h9jxnp9a': {
